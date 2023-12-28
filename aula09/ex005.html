@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução ao DOM</title>
+  <style>
+    body {
+      color: aliceblue;
+      background-color: rgb(105, 105, 173);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciando estudos com DOM</h1>
+  <p>Aqui vai o resultado</p>
+  <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+  <div id="msg">Clique em mim</div>
+
+  <script>
+    let corpo = window.document.body
+    let paragraph = document.getElementsByTagName('p')[0] //entre couchete é o numero do primeiro filho P
+    let div = document.querySelector('div#msg')
+    div.innerText = 'Estou treinando minha manipulação na DOM'
+  </script>
+</body>
+</html>

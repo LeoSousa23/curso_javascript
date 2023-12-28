@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+  <style>
+    body {
+      color: aliceblue;
+      background-color: rgb(105, 105, 173);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let nome = prompt('Qual é seu nome?')
+    let salarioBr = 1412
+    document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br>`)
+    document.write(`Seu nome em letras maiúsculas é ${nome.toUpperCase()}.<br>`)
+    document.write(`Seu nome em letras minúsculas é ${nome.toLowerCase()}.<br>`)
+    document.write(`
+    A média salarial no brasil é de ${salarioBr.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.<br> 
+    Nos EUA esse dinheiro valeria ${(salarioBr / 4.9).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}.<br>
+    Na EUR esse dinheiro valeria ${(salarioBr / 5.36).toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}
+    `)
+  </script>
+</body>
+</html>

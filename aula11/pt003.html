@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando condições</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      background-color: lightgoldenrodyellow;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    form {
+      margin-top: -120px;
+      width: 300px;
+      padding: 30px;
+      background-color: #fcfcfc;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, .3);
+    }
+
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-block: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+    }
+
+    #btnCheck {
+      cursor: pointer;
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: lightblue;
+      font-weight: bold;
+      transition: filter .3s;
+    }
+
+    #btnCheck:hover {
+      filter: brightness(90%);
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Sistema de nacionalidade</h1>
+    <div class="input-wrapper">
+      <p>De qual país você veio?</p>
+      <input type="text" name="country" id="country" placeholder="Ex: Estados Unidos">
+    </div>
+    <input type="button" value="Verificar" id="btnCheck">
+  </form>
+  <div id="nationalityResult">
+
+  </div>
+
+  <script>
+    let country = document.getElementById('country')
+    let btnCheck = document.getElementById('btnCheck')
+    let nationalityResult = document.getElementById('nationalityResult')
+
+    btnCheck.addEventListener('click', () => {
+      let countryValue = country.value
+
+      if(countryValue == 'Brasil') {
+        nationalityResult.innerHTML = `<p>Você é brasileiro!</p>`
+      } else {
+        nationalityResult.innerHTML = `<p>Você é estrangeiro!</p>`
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando DOM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      background-color: lightgoldenrodyellow;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    form {
+      margin-top: -120px;
+      width: 300px;
+      padding: 30px;
+      background-color: #fcfcfc;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, .3);
+    }
+
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-block: 20px;
+    }
+
+    input {
+      margin: auto;
+      width: 150px;
+      padding: 12px 16px;
+    }
+
+    #button {
+      cursor: pointer;
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: lightblue;
+      font-weight: bold;
+      transition: filter .3s;
+    }
+
+    #button:hover {
+      filter: brightness(90%);
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>Somando Valores</h1>
+    <div class="input-wrapper">
+      <p>Numero 1</p>
+      <input type="number" name="numberOne" id="numberOne">
+    </div>
+    <div class="input-wrapper">
+      <p>Numero 2</p>
+      <input type="number" name="numberTwo" id="numberTwo">
+    </div>
+    <input type="button" value="somar" id="button">
+  </form>
+
+  <div id="result">
+    O resultado aparecerá aqui...
+  </div>
+  <script>
+    // pegar os inputs, o botao e a div de resultado
+    let numberOne = document.querySelector('input#numberOne')
+    let numberTwo = document.querySelector('input#numberTwo')
+    let btnSum = document.getElementById('button')
+    let result = document.getElementById('result')
+
+    // passar os valores dos inputs para outras variaveis
+    btnSum.addEventListener('click', () => {
+      let n1 = Number(numberOne.value)
+      let n2 = Number(numberTwo.value)
+      let sum = n1 + n2
+      result.innerHTML = `O resultado da soma de ${n1} + ${n2} é <strong>${sum}</strong>`
+    })
+  </script>
+</body>
+</html>

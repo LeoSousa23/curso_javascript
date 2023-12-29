@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Condições</title>
+</head>
+<body>
+  <h1>Sistema de multas</h1>
+  <p>Velocidade do carro</p>
+  <input type="number" name="speed" id="speed" placeholder="km/h">
+  <input type="button" value="verificar" id="btnCheck">
+  <div id="result">
+
+  </div>
+
+  <script>
+    let carSpeed = document.getElementById('speed')
+    let btnCheck = document.getElementById('btnCheck')
+    let result = document.getElementById('result')
+    
+    btnCheck.addEventListener('click', () => {
+      let carSpeedValue = Number(carSpeed.value)
+
+      result.innerHTML = `<p>Sua velocidade atual é de <strong>${carSpeedValue}</strong> km/h.</p>`
+
+      if (carSpeedValue > 60) {
+        result.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+      }
+
+      result.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
+    })
+  </script>
+</body>
+</html>

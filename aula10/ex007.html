@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somando números</title>
+  <style>
+    body {
+      font-size: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Somando Valores</h1>
+  <input type="number" name="numberOne" id="numberOne"> +
+  <input type="number" name="numberTwo" id="numberTwo">
+  <input type="button" value="sum" onclick="calcSum()">
+  <div id="result">
+    Resultado
+  </div>
+
+  <script>
+    // pegando os inputs
+    let numberOne = document.getElementById('numberOne')
+    let numberTwo = document.getElementById('numberTwo')
+
+    // pegando a div que irá exibir o resultado
+    let result = document.getElementById('result')
+    
+    function calcSum() {
+      // pegando os valores dos inputs
+      let n1 = Number(numberOne.value)
+      let n2 = Number(numberTwo.value)
+      // somando os valores dos inputs
+      let sum = n1 + n2
+      // printando o resultado
+      result.innerHTML = `A soma entre ${n1} e ${n2} é de <strong>${sum}</strong>`
+    }
+  </script>
+</body>
+</html>

@@ -32,7 +32,7 @@ btnLogin.addEventListener('click', () => {
   }
   
   screenTwo.appendChild(userImage)
-  screenTwo.innerHTML += '<p>Damos as boas-vindas à nossa comunidade. Aproveite todas as funcionalidades disponíveis. Em caso de dúvidas, estamos à disposição. Obrigado por se juntar a nós!</p>'
+  screenTwo.innerHTML += `<p>Damos as boas-vindas à nossa comunidade <strong>${userName}</strong>. Aproveite todas as funcionalidades disponíveis. Em caso de dúvidas, estamos à disposição. Obrigado por se juntar a nós!</p>`
 })
 
 

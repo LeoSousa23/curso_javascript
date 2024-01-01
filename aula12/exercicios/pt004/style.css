@@ -121,6 +121,10 @@ input {
   line-height: 150%;
 }
 
+#screen-two strong {
+  color: var(--dark-purple);
+}
+
 #user-image {
   margin-block: 2rem;
   width: 20rem;

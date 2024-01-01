@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratica 04</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="app">
+    <img src="images/background.jpg" alt="ilustração de um beco de cidade ao entardecer">
+    <div id="screen-one" class="">
+      <h1>Faça seu cadastro</h1>
+      <form>
+        <div class="input-wrapper">
+          <label for="first-name">Nome</label>
+          <input type="text" name="first-name" id="first-name" placeholder="Leandro Sousa">
+          <i class="ph-light ph-user-circle"></i>
+        </div>
+        <div class="input-wrapper">
+          <label for="mail">E-mail</label>
+          <input type="mail" name="mail" id="mail" placeholder="meumelhoremail@gmail.com">
+          <i class="ph-light ph-at"></i>
+        </div>
+        <div class="input-wrapper">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" placeholder="Mínimo de 8 caracteres">
+          <i class="ph-light ph-key"></i>
+        </div>
+        <div class="input-wrapper">
+          <label for="sex">Gênero</label>
+          <div class="input-radio">
+            <div>
+              <input type="radio" name="sex" id="sex-mas">
+              <label for="sex-mas">Masculino</label>
+            </div>
+            <div>
+              <input type="radio" name="sex" id="sex-fem">
+              <label for="sex-fem">Feminino</label>
+            </div>
+          </div>
+        </div>
+        <input type="button" value="Login" id="btn-login">
+      </form>
+    </div>
+    <div id="screen-two" class="hide">
+      <h1>Cadastro realizado com sucesso!</h1>
+    </div>
+  </div>
+</body>
+</html>

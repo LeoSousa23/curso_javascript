@@ -44,7 +44,7 @@ body, textarea, button {
 #app {
   padding: 3.2rem;
 
-  width: 50rem;
+  width: 40rem;
   min-height: 40rem;
   box-shadow: -1rem 1rem;
   background-color: var(--snow-white);
@@ -105,7 +105,7 @@ i {
 
 #modal {
   padding: 3.2rem;
-  width: 50rem;
+  width: 40rem;
   background-color: var(--snow-white);
 }
 
@@ -171,4 +171,12 @@ i {
 
 #btn-insert:hover {
   background-color: var(--dark-purple);
+}
+
+@media (min-width: 768px) {
+  #app,
+  #modal {
+    width: 50rem;
+    margin: auto;
+  }
 }

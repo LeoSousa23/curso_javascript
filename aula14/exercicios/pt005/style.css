@@ -20,7 +20,6 @@
 
 body {
   height: 100vh;
-  font-size: 1.6rem;
 
   display: grid;
   place-items: center;
@@ -28,8 +27,9 @@ body {
   background-color: var(--light-purple);
 }
 
-body, input, button {
+body, textarea, button {
   font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
 }
 
 /* classe utilitaria */
@@ -74,12 +74,15 @@ i {
   flex-direction: column;
 }
 
-.cards {
-  width: 100%;
+.card {
+  max-width: 100%;
   padding: 1.2rem 5rem 1.2rem 1.6rem;
   box-shadow: -.3rem .3rem;
   background-color: #E6E6F0;
   position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* white-space: pre-line; */
 }
 
 /* modal */
@@ -111,18 +114,19 @@ i {
 }
 
 /* input note */
-#note {
+#input-note {
   padding: 1.6rem 1.2rem;
   width: 100%;
   border-radius: .4rem;
   border: .1rem solid #d7d7df;
   outline-color: var(--light-purple);
   background-color: var(--line-color);
+  resize: none;
+  overflow: auto;
 }
 
 /* todos os botoes */
 #btn-add,
-#btn-color,
 #btn-remove,
 #btn-close {
   cursor: pointer;
@@ -132,7 +136,6 @@ i {
 }
 
 #btn-add:hover,
-#btn-color:hover,
 #btn-remove:hover,
 #btn-close:hover {
   scale: 1.1;
@@ -143,13 +146,6 @@ i {
   color: var(--remove-color);
   position: absolute;
   top: 1.2rem;
-  right: 2rem;
-}
-
-/* botao de troca de background da nota */
-#btn-color {
-  position: absolute;
-  bottom: 1.2rem;
   right: 2rem;
 }
 

@@ -48,6 +48,7 @@ body, textarea, button {
   min-height: 40rem;
   box-shadow: -1rem 1rem;
   background-color: var(--snow-white);
+  animation: toDown 1s ease-in-out;
 }
 
 header {
@@ -66,8 +67,6 @@ h1 {
 i {
   font-size: 2.2rem;
 }
-
-
 
 #list-cards {
   display: flex;
@@ -178,5 +177,31 @@ i {
   #modal {
     width: 50rem;
     margin: auto;
+  }
+}
+
+@keyframes toDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  20% {
+    transform: translateY(15%);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(5%);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

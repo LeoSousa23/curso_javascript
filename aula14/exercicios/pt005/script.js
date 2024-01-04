@@ -7,15 +7,16 @@ let inputNote = document.getElementById('input-note') //input que recebe a nota
 
 btnAddNote.addEventListener('click', openModal)
 btnCloseModal.addEventListener('click', closeModal)
+btnInsertNote.addEventListener('click', insertNote)
 
-btnInsertNote.addEventListener('click', () => {
+function insertNote() {
   let noteContent = inputNote.value
 
   let card = document.createElement('div')
   card.setAttribute('class', 'card')
   card.innerHTML = `
   <p>${noteContent}</p>
-  <button id="btn-remove">
+  <button class="btn-remove">
     <i class="ph ph-x"></i>
   </button>
   `
@@ -25,7 +26,7 @@ btnInsertNote.addEventListener('click', () => {
   closeModal()
   
   inputNote.value = ''
-})
+}
 
 function openModal() {
   modalWrapper.classList.add('open')

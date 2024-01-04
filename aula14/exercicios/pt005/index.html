@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Todo list</h1>
+      <button id="btn-add">
+        <i class="ph ph-plus"></i>
+      </button>
+    </header>
+
+    <div class="line"></div>
+    <!-- area dos cards -->
+    <div id="list-cards">
+      <div class="cards">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate reprehenderit illum corporis illo optio rem ea eum harum quia tempora vero voluptates iste, dolor totam eligendi atque, officia, laudantium beatae.</p>
+        <button id="btn-color">
+          <i class="ph ph-palette"></i>
+        </button>
+        <button id="btn-remove">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+    </div>
+    <!-- modal -->
+    <div id="modal-wrapper" class="">
+      <div id="modal">
+        <div id="header-modal">
+          <h1>Inserir nota</h1>
+          <button id="btn-close">
+            <i class="ph ph-x"></i>
+          </button>
+        </div>
+        <div class="line"></div>
+        <!-- input note -->
+        <input type="text" name="note" id="note" placeholder="Digite seu texto aqui...">
+        <button id="btn-insert">Inserir</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

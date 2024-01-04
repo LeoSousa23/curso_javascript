@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rubik+Doodle+Shadow&display=swap');
+
+
+:root {
+  font-size: 62.5%;
+
+  --snow-white: #fafafa;
+  --line-color: #E6E6F0;
+  --light-purple: #9A6CD9;
+  --dark-purple: #311273;
+  --remove-color: #9a2416;
+  --bg-modal: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--light-purple);
+}
+
+body, input, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* classe utilitaria */
+.line {
+  margin-block: 1.2rem;
+  width: 100%;
+  height: .2rem;
+  border-radius: 50%;
+  background-color: var(--line-color);
+}
+
+#app {
+  padding: 3.2rem;
+
+  width: 50rem;
+  min-height: 40rem;
+  box-shadow: -1rem 1rem;
+  background-color: var(--snow-white);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 3.6rem;
+  color: var(--dark-purple);
+  font-family: 'Rubik Doodle Shadow', system-ui;
+}
+
+i {
+  font-size: 2.2rem;
+}
+
+
+
+#list-cards {
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+
+.cards {
+  width: 100%;
+  padding: 1.2rem 5rem 1.2rem 1.6rem;
+  box-shadow: -.3rem .3rem;
+  background-color: #E6E6F0;
+  position: relative;
+}
+
+/* modal */
+#modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-modal);
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal {
+  padding: 3.2rem;
+  width: 50rem;
+  background-color: var(--snow-white);
+}
+
+#header-modal {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* input note */
+#note {
+  padding: 1.6rem 1.2rem;
+  width: 100%;
+  border-radius: .4rem;
+  border: .1rem solid #d7d7df;
+  outline-color: var(--light-purple);
+  background-color: var(--line-color);
+}
+
+/* todos os botoes */
+#btn-add,
+#btn-color,
+#btn-remove,
+#btn-close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: scale .2s ease-in;
+}
+
+#btn-add:hover,
+#btn-color:hover,
+#btn-remove:hover,
+#btn-close:hover {
+  scale: 1.1;
+}
+
+/* botao de remover a nota */
+#btn-remove {
+  color: var(--remove-color);
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+}
+
+/* botao de troca de background da nota */
+#btn-color {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 2rem;
+}
+
+/* botao de fechar modal */
+#btn-close {
+  color: var(--remove-color);
+  
+}
+
+/* botao de inserir nota */
+#btn-insert {
+  cursor: pointer;
+  margin-top: 1.2rem;
+  padding: 1.2rem 1.6rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: .4rem;
+  color: var(--snow-white);
+  background-color: var(--light-purple);
+  transition: .3s ease-in;
+}
+
+#btn-insert:hover {
+  background-color: var(--dark-purple);
+}

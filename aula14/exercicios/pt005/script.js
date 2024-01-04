@@ -9,21 +9,26 @@ btnAddNote.addEventListener('click', openModal)
 btnCloseModal.addEventListener('click', closeModal)
 btnInsertNote.addEventListener('click', insertNote)
 
+
 function insertNote() {
   let noteContent = inputNote.value
 
-  let card = document.createElement('div')
-  card.setAttribute('class', 'card')
-  card.innerHTML = `
-  <p>${noteContent}</p>
-  <button class="btn-remove">
-    <i class="ph ph-x"></i>
-  </button>
-  `
+  if (inputNote.value.length == 0) {
+    alert('Escreva uma nota para ser adicionada!')
+  } else {
+    let card = document.createElement('div')
+    card.setAttribute('class', 'card')
+    card.innerHTML = `
+    <p>${noteContent}</p>
+    <button class="btn-remove">
+      <i class="ph ph-x"></i>
+    </button>
+    `
+  
+    listCards.appendChild(card)
+    closeModal()
+  }
 
-  listCards.appendChild(card)
-
-  closeModal()
   
   inputNote.value = ''
 }

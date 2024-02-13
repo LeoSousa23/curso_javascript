@@ -47,11 +47,11 @@ footer {
   background-color: #FAFAFC;
 }
 select {
+  width: 150px;
   padding: 10px;
   display: block;
-  overflow: hidden;
   margin-block: 10px;
-  border-radius: 8px;
+  border-radius: 4px;
   outline-color: lightblue;
   border: 1px solid #E6E6F0;
   background-color: #FAFAFC;
@@ -78,4 +78,11 @@ option {
 
 #btn-fin:hover, #btn-add:hover {
   background-color: rgb(150, 186, 197);
+}
+
+#result {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
